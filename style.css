@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+    background-color: #F3F2F0;
+}
+
+.Top-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    margin: 10px;
+    padding: 10px;
+    font-size: 24px;
+    font-weight: 800;
+    color: #700028;
+    z-index: 5;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    justify-items: baseline;  */
+    padding-left: 40px;
+    height: 598px;
+    margin-left: 40px;
+    margin-right: 40px;
+    background-image: url("./Frame\ 1\(4\).png");
+}
+
+.hero h2 {
+    font-size: 120px;
+    font-weight: 600;
+    margin-top: 10px;
+    color: #700028;
+}
+
+.the-buttons {
+    display: flex;
+    flex-direction: row;
+    row-gap: 20px;
+    margin-top: 20px;
+}
+
+.first-button {
+    font-size: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    /* outline: 1px solid #fff; */
+    padding: 10px 30px 10px 30px;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    background-color: #700028;
+    transition: color 1s;
+    z-index: 5;
+    display: block;
+    width: max-content;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.first-button:hover {
+    color: #700028;
+    outline: 1px solid #fff;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.first-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 0;
+    height: 100%;
+    background-color: #fff;
+    transform: skewX(35deg);
+    z-index: -5;
+    transition: width 1s;
+}
+
+.first-button:hover::after {
+    width: 150%;
+}
+
+.other-button {
+    font-size: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #700028;
+    outline: 1px solid #700028;
+    padding: 10px 30px 10px 30px;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    transition: color 1s;
+    z-index: 5;
+    display: block;
+    width: max-content;
+    box-shadow: none;
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+.other-button:hover {
+    color: #700028;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.aother-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 0;
+    height: 100%;
+    background-color: #fff;
+    transform: skewX(35deg);
+    z-index: -5;
+    transition: width 1s;
+}
+
+.other-button:hover::after {
+    width: 150%;
+}
+
+.sticky-buttons {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+/* .fa-solid{
+    color: #333;
+    font-size: 64px;
+
+} */
+#up {
+    Display: grid;
+    Place-content: center;
+    width: 80px;
+    height: 80px;
+    background-color: #333;
+    color: #ffff;
+    border-radius: 100%;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    position: -webkit-sticky;
+    position: sticky;
+    /* top: 0; */
+}
+
+#help {
+    Display: grid;
+    Place-content: center;
+    width: 80px;
+    height: 80px;
+    background-color: #700028;
+    color: #ffff;
+    border-radius: 100%;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    position: -webkit-sticky;
+    position: sticky;
+    /* top: 0; */
+}
+
+.date,
+.venue,
+.reminder {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    margin-left: 240px;
+}
+
+.invite,
+.colors {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    margin-left: 720px;
+    margin-bottom: 120px;
+}
+
+.invite hr,
+.date hr,
+.venue hr,
+.colors hr,
+.reminder hr {
+    width: 40px;
+    height: 2px;
+    color: #333;
+}
+
+.invite h4,
+.date h4,
+.venue h4,
+.colors h4,
+.reminder h4 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 10px;
+    color: #700028;
+}
+
+.invite h2,
+.date h2,
+.venue h2,
+.colors h2,
+.reminder h2 {
+    font-size: 56px;
+    font-weight: 600;
+    margin-top: 10px;
+    color: #700028;
+}
+
+.images {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin-top: 60px;
+}
+
+.the-images {
+    width: 980px;
+    height: 980px;
+    align-self: center;
+
+}
+
+.the-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.images h4 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-left: 230px;
+    color: #700028;
+    margin-bottom: 80px;
+}
+
+.rsvp {
+    display: flex;
+    flex-direction: row;
+    row-gap: 20px;
+    align-items: center;
+
+}
+
+.rsvp button {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 20px;
+    color: #333;
+    margin-bottom: 80px;
+    border: none;
+
+}
+
+.last {
+    display: flex;
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 120px;
+    color: #700028;
+    margin-bottom: 80px;
+    justify-content: center;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    gap: 1rem;
+    padding: 1.3rem;
+    min-height: 250px;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    z-index: 10;
+    position: fixed;
+    top: 50% !important;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal h3 {
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 10px;
+    color: #700028;
+    background-color: transparent;
+}
+
+.modal input {
+    padding: 0.7rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.modal p {
+    font-size: 0.9rem;
+    color: #777;
+    margin: 0.4rem 0 0.2rem;
+}
+
+.inputs {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+    background-color: white;
+
+}
+
+.modal-buttons{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+    background-color: white;
+    
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    font-weight: 600;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    z-index: 1;
+}
+
+.hidden {
+    display: none;
+}
