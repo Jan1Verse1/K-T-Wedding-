@@ -260,7 +260,7 @@
 }
 
 .images h4 {
-  font-size: 16px;
+  font-size: 24px;
   font-weight: 600;
   margin-top: 10px;
   color: #700028;
@@ -472,7 +472,7 @@ body #snackbar.show.success {
     display: flex;
     flex-direction: column;
     align-self: center;
-    margin-top: 20px;
+    margin-top: 60px;
     margin-left: 20px;
 
   }
@@ -531,6 +531,7 @@ body #snackbar.show.success {
     width: fit-content;
     height: auto;
     align-self: center;
+    justify-content: center;
   }
 
   .the-images img {
@@ -551,13 +552,17 @@ body #snackbar.show.success {
     justify-content: center;
   }
 
+  /* .image-text{
+    display: flex;
+    margin-left: 240px;
+  } */
   .images h4 {
-    font-size: 24px;
+    font-size: 16px;
     font-weight: 600;
-    margin-top: 40px;
+    margin-top: 0px;
+    margin-left: 30px;
     color: #700028;
-    margin-bottom: 40px;
-    margin-left: 156px;
+    margin-bottom: 20px;
   }
 
   .modal {
