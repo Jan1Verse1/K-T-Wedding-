@@ -32,8 +32,13 @@
     justify-items: baseline;  */
   padding-left: 40px;
   height: 598px;
+  width: 100%;
   margin-left: 40px;
   margin-right: 40px;
+}
+
+.hero-img {
+  width: 100vw;
 }
 
 .hero h2 {
@@ -245,6 +250,7 @@
   flex-direction: column;
   align-self: center;
   margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 .the-images {
@@ -431,10 +437,15 @@ body #snackbar.show.success {
 
 
 @media (min-width: 375px) and (max-width: 576px) {
+
   .Top-bar {
     padding: 0 50px;
     margin: 0px;
     z-index: 5;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 10px;
   }
 
   .hero {
@@ -443,7 +454,11 @@ body #snackbar.show.success {
     align-items: center;
     z-index: -1;
     height: auto;
+    width: 100vw;
+    margin-left: 0px;
+    margin-right: 0px;
     margin-bottom: 40px;
+    /* border: solid 2px #009944; */
   }
 
   .hero h2 {
@@ -451,6 +466,7 @@ body #snackbar.show.success {
     font-weight: 600;
     margin-top: 10px;
     color: #700028;
+    text-align: center;
   }
 
   .the-buttons {
@@ -460,11 +476,13 @@ body #snackbar.show.success {
     margin-top: 20px;
   }
 
-  .hero-img {
-    width: fit-content;
-    height: fit-content;
-    object-fit: contain;
+  /* .hero-img {
+    width: 100vw;
+  } */
+  .hero img {
+    width: 400px;
   }
+
 
   .date,
   .venue,
@@ -473,7 +491,7 @@ body #snackbar.show.success {
     flex-direction: column;
     align-self: center;
     margin-top: 60px;
-    margin-left: 20px;
+    margin-left: 56px;
 
   }
 
@@ -485,7 +503,7 @@ body #snackbar.show.success {
     margin-top: 80px;
 
     margin-bottom: 40px;
-    margin-left: 120px;
+    margin-left: 220px;
   }
 
   .invite hr,
@@ -523,6 +541,7 @@ body #snackbar.show.success {
   .images {
     display: flex;
     flex-direction: column;
+    width: 100%;
     align-self: center;
     margin-top: 60px;
   }
@@ -543,12 +562,12 @@ body #snackbar.show.success {
 
   .last {
     display: flex;
-    font-size: 16px;
+    font-size: 14px;
     text-align: center;
-    font-weight: 600;
-    margin-top: 80px;
+    font-weight: 400;
+    margin-top: 64px;
     color: #700028;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
     justify-content: center;
   }
 
