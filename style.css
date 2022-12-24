@@ -613,17 +613,25 @@ body #snackbar.show.success {
     background-color: transparent;
   }
 
-  .modal input {
+  .modal input,
+  .modal select {
     padding: 0.7rem 1rem;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 0.9em;
   }
 
-  .modal p {
+  .modal p{
     font-size: 0.9rem;
     color: #777;
     margin: 0.4rem 0 0.2rem;
+    box-shadow: none;
+  }
+  .form-select p {
+    font-size: 0.9rem;
+    color: #777;
+    margin: 0.4rem 0 0.2rem;
+    box-shadow: none;
   }
 
   .inputs {
