@@ -9,6 +9,10 @@
   background-color: #f3f2f0;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .Top-bar {
   display: flex;
   flex-direction: row;
@@ -17,8 +21,8 @@
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  margin: 10px;
-  padding: 10px;
+  padding: 20px;
+  margin-bottom: 10px;
   font-size: 24px;
   font-weight: 800;
   color: #700028;
@@ -123,6 +127,12 @@
   box-shadow: none;
   margin-left: 40px;
   cursor: pointer;
+}
+
+.other-button a {
+  color: inherit;
+  text-decoration: none;
+  background: transparent;
 }
 
 .other-button:hover {
@@ -327,11 +337,13 @@
   background-color: transparent;
 }
 
-.modal input {
+.modal input,
+.modal select {
   padding: 0.7rem 1rem;
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 0.9em;
+  color: #777;
 }
 
 .modal p {
@@ -435,9 +447,7 @@ body #snackbar.show.success {
   animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
-
-@media (min-width: 375px) and (max-width: 576px) {
-
+@media (min-width: 325px) and (max-width: 576px) {
   .Top-bar {
     padding: 0 50px;
     margin: 0px;
@@ -483,7 +493,6 @@ body #snackbar.show.success {
     width: 400px;
   }
 
-
   .date,
   .venue,
   .reminder {
@@ -492,7 +501,6 @@ body #snackbar.show.success {
     align-self: center;
     margin-top: 60px;
     margin-left: 56px;
-
   }
 
   .invite,
@@ -621,7 +629,7 @@ body #snackbar.show.success {
     font-size: 0.9em;
   }
 
-  .modal p{
+  .modal p {
     font-size: 0.9rem;
     color: #777;
     margin: 0.4rem 0 0.2rem;
@@ -705,6 +713,4 @@ body #snackbar.show.success {
   .inputs .success {
     border: 2px solid green;
   }
-
-
 }
