@@ -464,7 +464,7 @@ body #snackbar.show.success {
     align-items: center;
     z-index: -1;
     height: auto;
-    width: 100vw;
+    width: 90vw;
     margin-left: 0px;
     margin-right: 0px;
     margin-bottom: 40px;
@@ -490,7 +490,7 @@ body #snackbar.show.success {
     width: 100vw;
   } */
   .hero img {
-    width: 400px;
+    width: 350px;
   }
 
   .date,
