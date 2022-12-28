@@ -31,18 +31,17 @@ function clearInputs() {
   fullname.value = "";
   email.value = "";
   phone.value = "";
-  guestType.value = "Select Guest Category";
+  guestType.value = "";
 
   fullname.classList.remove("success");
   email.classList.remove("success");
   phone.classList.remove("success");
   guestType.classList.remove("success");
 
-
   fullname.classList.remove("error");
   email.classList.remove("error");
   phone.classList.remove("error");
- guestType.classList.remove("error");
+  guestType.classList.remove("error");
 }
 
 //snackbar
@@ -62,6 +61,7 @@ const snackBar = (message, type) => {
 function handleRsvp() {
   loading_animation.classList.toggle("animation");
   submit_button.disabled = true;
+
   //name check
   if (fullname.value == "") {
     fullname.classList.remove("success");
@@ -78,7 +78,7 @@ function handleRsvp() {
     email.classList.add("success");
   }
 
-  //email check
+  //phone check
   if (phone.value == "") {
     phone.classList.remove("success");
     phone.classList.add("error");
@@ -87,26 +87,30 @@ function handleRsvp() {
   }
 
   //guestType check
-  if (guestType.value == "Select Guest Category") {
-    phone.classList.remove("success");
-    phone.classList.add("error");
+  if (guestType.value == "") {
+    guestType.classList.remove("success");
+    guestType.classList.add("error");
   } else {
     guestType.classList.add("success");
   }
 
-  if (fullname.value != "" && email.value != "" && phone.value != "" && guestType.value != "Select Guest Category") {
-    let formdata = new FormData();
-    formdata.append("full_name", fullname.value);
-    formdata.append("email_address", email.value);
-    formdata.append("phone", phone.value);
-    formdata.append("guestType", guestType.value);
-
+  if (
+    fullname.value != "" &&
+    email.value != "" &&
+    phone.value != "" &&
+    guestType.value != ""
+  ) {
     fetch("https://my-playground-437o.onrender.com/addrsvp", {
       method: "post",
       headers: {
         "Content-type": "application/json",
       },
-      body: JSON.stringify(formdata),
+      body: JSON.stringify({
+        full_name: fullname.value,
+        email_address: email.value,
+        phone: phone.value,
+        guest_type: guestType.value,
+      }),
     })
       .then(function (data) {
         clearInputs();
